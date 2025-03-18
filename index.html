@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    title>Best Real Estate Developers in Yelahanka, Bangalore - RVR Developers</title>
-    <meta name="description" content="Looking for trusted real estate developers in Yelahanka, Bangalore? RVR Developers offers premium properties with modern amenities. Contact us today!">
-    <meta name="keywords" content="Real Estate Developers in Yelahanka, Property Developers Bangalore, RVR Developers, Yelahanka Builders, Bangalore Real Estate">
-    <meta name="author" content="RVR Developers">
+    <meta name="description" content="Looking for trusted real estate developers in Yelahanka, Bangalore? RVR Builders and Developers offers premium properties with modern amenities. Contact us today!">
+    <meta name="keywords" content="Real Estate Developers in Yelahanka, Property Developers Bangalore, RVR Builders and Developers, Yelahanka Builders, Bangalore Real Estate">
+    <meta name="author" content="RVR Builders and Developers">
     <meta name="robots" content="index, follow">
-    <title>RVR Developers</title>
+    <title>RVR Builders and Developers</title>
     <style>
         /* Basic Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            z-index: 102;
+            padding: 5px;
         }
 
         body {
@@ -33,28 +42,27 @@
 
         /* Header Styles */
         header {
-    background: linear-gradient(to right, #003366, #005792, #0099cc);
-    padding: 25px 40px; /* Increased horizontal padding */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: relative;
-}
+            background: linear-gradient(to right, #003366, #005792, #0099cc);
+            padding: 15px 25px; /* Increased horizontal padding */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+        }
 
-/* Logo container fixes */
-.logo-container {
-    display: flex;
-    align-items: center;
-    z-index: 101;
-}
+        .logo-container {
+            display: flex;
+            align-items: center;
+            z-index: 101;
+        }
 
-.logo {
-    width: 200px; /* Adjusted size */
-    height: 150; /* Maintain aspect ratio */
-    margin-right: 20px;
-}
+        .logo {
+            width: 200px; /* Adjusted size */
+            height: 100px; /* Maintain aspect ratio */
+            margin-right: 20px;
+        }
 
         .site-title {
             color: white;
@@ -62,70 +70,111 @@
             font-weight: bold;
         }
 
+        /* Update this CSS */
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
         .logo-container h1 {
             color: white;
             font-size: 1.6rem;
+            display: block; /* Ensure this is visible */
         }
 
-       nav {
-    flex-grow: 1; /* Allow nav to take available space */
-    display: flex;
-    justify-content: flex-end; /* Align menu to the right */
-}
+        @media (max-width: 768px) {
+            .logo-container h1 {
+                font-size: 1.2rem; /* Smaller on mobile */
+            }
+        }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-}
+        nav {
+            flex-grow: 1; /* Allow nav to take available space */
+            display: flex;
+            justify-content: flex-end; /* Align menu to the right */
+        }
 
-nav ul li {
-    margin: 0 15px;
-}
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    font-size: 1.3rem; /* Increased font size */
-    font-weight: 500;
-    display: block;
-}
+        nav ul li {
+            margin: 0 15px;
+        }
 
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
-}
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 1.3rem; /* Increased font size */
+            font-weight: 500;
+            display: block;
+        }
 
-/* Add this to fix any mobile layout issues */
-@media (max-width: 768px) {
-    header {
-        padding: 15px 20px;
-        flex-wrap: wrap;
-    }
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
 
-    nav {
-        margin-top: 10px;
-        width: 100%;
-        justify-content: center;
-    }
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
 
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+            nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(0, 51, 102, 0.95);
+                z-index: 100;
+                display: none; /* Hide by default */
+                flex-direction: column;
+                justify-content: center;
+                padding-top: 60px;
+            }
 
-    nav ul li {
-        margin: 5px 10px;
-    }
-}
+            nav.active {
+                display: flex;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            nav ul li a {
+                width: 100%;
+                display: block;
+                padding: 15px 0;
+            }
+        }
+
         /* Enhanced Hero Section */
         .hero {
-            background: linear-gradient(to right, rgba(0,36,70,0.85), rgba(0,51,102,0.75), rgba(91,140,171,0.7)), url('images/hero-bg.jpg');
+            background: linear-gradient(to right, rgba(0,36,70,0.85), rgba(0,51,102,0.75), rgba(91,140,171,0.7)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             height: 600px;
@@ -136,16 +185,17 @@ nav ul li a:hover {
             color: white;
             position: relative;
             overflow: hidden;
+            perspective: 1000px; /* Added for 3D effect */
         }
 
         .hero::before {
             content: '';
             position: absolute;
-            bottom: 0;
+            top: 0;
             left: 0;
             right: 0;
-            height: 150px;
-            background: linear-gradient(to top, rgba(255,255,255,0.15), transparent);
+            bottom: 0;
+            background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.3) 100%); /* Added radial gradient */
             z-index: 1;
         }
 
@@ -155,12 +205,17 @@ nav ul li a:hover {
             background-color: rgba(0,51,102,0.5);
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px); /* Added blur effect */
+            border: 1px solid rgba(255,255,255,0.2); /* Added border */
             z-index: 2;
-            transform: translateY(0);
-            transition: transform 0.5s;
+            animation: float 6s ease-in-out infinite; /* Added floating animation */
             margin: 0 15px;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
 
         .hero:hover .hero-content {
@@ -243,9 +298,22 @@ nav ul li a:hover {
             text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
 
+        /* Update this CSS to ensure backgrounds cover properly */
+        .section-background, .services, .work, .contact, .location, .choose-right-company, .usp-section {
+            background-attachment: fixed; /* This can help with mobile scrolling */
+            background-size: cover;
+            background-position: center;
+        }
+
+        @media (max-width: 768px) {
+            .section-background, .services, .work, .contact, .location, .choose-right-company, .usp-section {
+                background-attachment: scroll; /* Better for mobile */
+            }
+        }
+
         /* Services Section */
         .services {
-            background: linear-gradient(to right, rgba(0,36,70,0.85), rgba(0,51,102,0.75), rgba(91,140,171,0.7)), url('images/services-bg.jpg');
+            background: linear-gradient(to right, rgba(0,36,70,0.85), rgba(0,51,102,0.75), rgba(91,140,171,0.7)), url('https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             color: white;
@@ -269,26 +337,28 @@ nav ul li a:hover {
             flex-wrap: wrap;
         }
 
-        .service-card {
+        .service-card, .work-card {
             background-color: rgba(0,51,102,0.8);
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
+            transform-style: preserve-3d; /* Added for 3D effect */
+            perspective: 1000px; /* Added perspective */
+            transition: transform 0.3s, box-shadow 0.3s; /* Added transition */
             flex: 1;
             min-width: 250px;
             max-width: 280px;
             margin-bottom: 20px;
         }
 
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        .service-card:hover, .work-card:hover {
+            transform: perspective(1000px) rotateY(5deg) translateY(-10px); /* Added hover effect */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Added shadow */
         }
 
         .service-img {
             width: 100%;
-            height: 200px;
+            height: 200px; /* Changed to auto to maintain aspect ratio */
             overflow: hidden;
             position: relative;
         }
@@ -306,8 +376,8 @@ nav ul li a:hover {
 
         .service-img img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: 100%; /* Changed to auto to maintain aspect ratio */
+            object-fit: cover; /* Changed to contain to ensure full image visibility */
             transition: transform 0.5s;
         }
 
@@ -316,7 +386,7 @@ nav ul li a:hover {
         }
 
         .service-content {
-            padding: 20px;
+            padding:'';
             background-color: rgba(0,51,102,0.9);
             color: white;
             text-align: center;
@@ -324,12 +394,12 @@ nav ul li a:hover {
 
         .service-title {
             font-size: 1.4rem;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         /* Our Work Section */
         .work {
-            background: linear-gradient(to right, rgba(0,36,70,0.85), rgba(0,51,102,0.75), rgba(91,140,171,0.7)), url('images/work-bg.jpg');
+            background: linear-gradient(to right, rgba(0,36,70,0.85), rgba(0,51,102,0.75), rgba(91,140,171,0.7)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             color: white;
@@ -352,7 +422,7 @@ nav ul li a:hover {
             flex: 1;
             min-width: 250px;
             max-width: 280px;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
         }
 
         .work-card:hover {
@@ -362,7 +432,7 @@ nav ul li a:hover {
 
         .work-img {
             width: 100%;
-            height: 220px;
+            height: auto; /* Changed to auto to maintain aspect ratio */
             overflow: hidden;
             position: relative;
         }
@@ -380,8 +450,8 @@ nav ul li a:hover {
 
         .work-img img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: 220px; /* Changed to auto to maintain aspect ratio */
+            object-fit: cover; /* Changed to contain to ensure full image visibility */
             transition: transform 0.5s;
         }
 
@@ -390,7 +460,7 @@ nav ul li a:hover {
         }
 
         .work-title {
-            padding: 15px;
+            padding: 0px;
             background-color: rgba(0,51,102,0.9);
             color: white;
             text-align: center;
@@ -399,10 +469,11 @@ nav ul li a:hover {
 
         /* USP Section */
         .usp-section {
+            background: linear-gradient(to right, rgba(0,36,70,0.85), rgba(0,51,102,0.75), rgba(91,140,171,0.7)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white; /* Ensure text color is white */
             padding: 80px 0;
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: #f0f4f8;
         }
 
         .usp-container {
@@ -440,16 +511,22 @@ nav ul li a:hover {
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #003366;
             border-radius: 50%;
-            color: white;
             flex-shrink: 0;
             box-shadow: 0 5px 15px rgba(0, 51, 102, 0.3);
             transition: transform 0.3s;
+            overflow: hidden; /* Ensure the image stays within the circle */
         }
 
-        .usp-item:hover .usp-icon {
-            transform: scale(1.1);
+        .usp-icon img {
+            width: 100%; /* Ensure the image fills the circle */
+            height: 100%;
+            object-fit: contain; /* Changed to contain to ensure full image visibility */
+            transition: transform 0.3s;
+        }
+
+        .usp-item:hover .usp-icon img {
+            transform: scale(1.1); /* Add hover effect */
         }
 
         .center-icon {
@@ -472,12 +549,6 @@ nav ul li a:hover {
             line-height: 1.2;
         }
 
-        .usp-icon img {
-            width: 50px;
-            height: 50px;
-            filter: invert(1);
-        }
-
         .usp-content {
             max-width: 300px;
             padding: 0 20px;
@@ -492,21 +563,21 @@ nav ul li a:hover {
         }
 
         .usp-heading {
-            color: #003366;
+            color: white; /* Change heading color to white */
             font-size: 1.3rem;
             margin-bottom: 10px;
             white-space: nowrap;
         }
 
         .usp-text {
-            color: #555;
+            color: white; /* Change text color to white */
             font-size: 0.95rem;
             line-height: 1.4;
         }
 
         /* Choose the Right Construction Company Section */
         .choose-right-company {
-            background: linear-gradient(to right, rgba(0,36,70,0.85), rgba(0,51,102,0.75), rgba(91,140,171,0.7)), url('images/construction-bg.jpg');
+            background: linear-gradient(to right, rgba(0,36,70,0.85), rgba(0,51,102,0.75), rgba(91,140,171,0.7)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             color: white;
@@ -607,7 +678,7 @@ nav ul li a:hover {
 
         /* Contact Section */
         .contact {
-            background: linear-gradient(to right, rgba(0,36,70,0.85), rgba(0,51,102,0.75), rgba(91,140,171,0.7)), url('images/contact-bg.jpg');
+            background: linear-gradient(to right, rgba(0,36,70,0.85), rgba(0,51,102,0.75), rgba(91,140,171,0.7)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             color: white;
@@ -702,7 +773,7 @@ nav ul li a:hover {
 
         /* Location Section */
         .location {
-            background: linear-gradient(to right, rgba(0,36,70,0.85), rgba(0,51,102,0.75), rgba(91,140,171,0.7)), url('images/location-bg.jpg');
+            background: linear-gradient(to right, rgba(0,36,70,0.85), rgba(0,51,102,0.75), rgba(91,140,171,0.7)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             color: white;
@@ -768,6 +839,71 @@ nav ul li a:hover {
             margin-bottom: 10px;
         }
 
+        /* VR Experience Section */
+        .vr-experience {
+            background: linear-gradient(to right, rgba(0,36,70,0.85), rgba(0,51,102,0.75), rgba(91,140,171,0.7)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 20px;
+        }
+
+        .vr-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .vr-text {
+            flex: 1;
+            padding: 20px;
+            min-width: 300px;
+            text-align: left;
+        }
+
+        .vr-text h3 {
+            color: #0055aa;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .vr-text p {
+            color: white;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .vr-demo {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+
+        .vr-headset {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: float-headset 6s ease-in-out infinite;
+        }
+
+        @keyframes float-headset {
+            0% { transform: translateY(0) rotateY(0deg); }
+            50% { transform: translateY(-15px) rotateY(10deg); }
+            100% { transform: translateY(0) rotateY(0deg); }
+        }
+
+        .vr-headset img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
         /* Footer */
         footer {
             background: linear-gradient(to right, rgba(0,36,70,0.85), rgba(0,51,102,0.75), rgba(91,140,171,0.7));
@@ -794,72 +930,64 @@ nav ul li a:hover {
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
-            header {
-                padding: 15px;
-            }
+       @media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
 
-            .logo-container h1 {
-                font-size: 1.3rem;
-            }
+    .logo {
+        width: 100px;
+        height: 70px;
+    }
 
-            .logo {
-                width: 50px;
-                margin-right: 8px;
-            }
+    .menu-toggle {
+        display: block;
+    }
 
-            .menu-toggle {
-                display: block;
-                font-size: 1.8rem;
-            }
+    nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 51, 102, 0.95);
+        z-index: 100;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 60px;
+    }
 
-            .menu-toggle i {
-                color: white;
-            }
+    nav.active {
+        display: flex;
+    }
 
-            nav {
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: linear-gradient(to right, rgba(0,36,70,0.85), rgba(0,51,102,0.75), rgba(91,140,171,0.7));
-                padding-top: 70px;
-                transform: translateX(100%);
-                transition: transform 0.3s ease-in-out;
-                z-index: 100;
-            }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
 
-            nav.active {
-                transform: translateX(0);
-            }
+    nav ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
 
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-                height: 100%;
-                overflow-y: auto;
-            }
+    nav ul li a {
+        width: 100%;
+        display: block;
+        padding: 15px 0;
+    }
+}
 
-            nav ul li {
-                margin: 15px 0;
-                width: 100%;
-                text-align: center;
-            }
 
-            nav ul li a {
-                display: block;
-                padding: 15px;
-                font-size: 1.2rem;
-                width: 100%;
-            }
-
+            @media (max-width: 768px) {
             .hero {
-                height: 500px;
+                height: 400px;
             }
 
             .hero-content {
-                padding: 25px 15px;
+                padding: 20px;
             }
 
             .hero-content h2 {
@@ -868,120 +996,121 @@ nav ul li a:hover {
 
             .hero-content p {
                 font-size: 1rem;
-                line-height: 1.5;
             }
 
             .cta-btn {
-                padding: 12px 25px;
+                padding: 10px 20px;
                 font-size: 0.9rem;
             }
+        }
 
-            .section {
-                padding: 50px 15px;
-            }
 
-            .section-title {
-                font-size: 1.8rem;
-                margin-bottom: 25px;
-            }
+            @media (max-width: 768px) {
+    .section {
+        padding: 40px 15px;
+    }
 
-            .section-content {
-                font-size: 1rem;
-                text-align: center;
-            }
+    .section-title {
+        font-size: 1.8rem;
+    }
 
-            .services-intro {
-                text-align: center;
-            }
+    .section-content {
+        font-size: 1rem;
+    }
 
-            .services-grid, .work-grid {
-                gap: 15px;
-            }
+    .services-grid, .work-grid {
+        gap: 15px;
+    }
 
-            .service-card, .work-card {
-                min-width: 100%;
-                max-width: 100%;
-            }
+    .service-card, .work-card {
+        min-width: 100%;
+        max-width: 100%;
+    }
 
-            .service-title, .work-title h3 {
-                font-size: 1.2rem;
-            }
+    .service-title, .work-title h3 {
+        font-size: 1.2rem;
+    }
+}
 
-            .usp-container {
-                padding: 0;
-            }
+            @media (max-width: 768px) {
+    .usp-container {
+        padding: 0;
+    }
 
-            .usp-row {
-                flex-direction: column;
-                align-items: center;
-                margin: 15px 0;
-            }
+    .usp-row {
+        flex-direction: column;
+        align-items: center;
+        margin: 15px 0;
+    }
 
-            .usp-item {
-                max-width: 100%;
-                margin: 15px 0;
-                flex-direction: column;
-            }
+    .usp-item {
+        max-width: 100%;
+        margin: 15px 0;
+        flex-direction: column;
+    }
 
-            .left-item, .right-item {
-                margin: 15px 0;
-            }
+    .left-item, .right-item {
+        margin: 15px 0;
+    }
 
-            .usp-icon {
-                width: 80px;
-                height: 80px;
-                margin-bottom: 15px;
-            }
+    .usp-icon {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 15px;
+    }
 
-            .usp-icon img {
-                width: 40px;
-                height: 40px;
-            }
+    .usp-icon img {
+        width: 40px;
+        height: 40px;
+    }
 
-            .center-icon {
-                position: relative;
-                transform: none;
-                top: auto;
-                left: auto;
-                margin: 20px auto;
-                order: -1;
-            }
+    .center-icon {
+        position: relative;
+        transform: none;
+        top: auto;
+        left: auto;
+        margin: 20px auto;
+        order: -1;
+    }
 
-            .text-right, .text-left {
-                text-align: center;
-                padding: 10px 0;
-            }
+    .text-right, .text-left {
+        text-align: center;
+        padding: 10px 0;
+    }
 
-            .usp-content {
-                padding: 0;
-                width: 100%;
-            }
+    .usp-content {
+        padding: 0;
+        width: 100%;
+    }
 
-            .usp-heading {
-                font-size: 1.2rem;
-                white-space: normal;
-            }
+    .usp-heading {
+        font-size: 1.2rem;
+        white-space: normal;
+    }
+}
 
-            .contact-container {
-                gap: 15px;
-            }
+            @media (max-width: 768px) {
+    .contact-container {
+        gap: 15px;
+    }
 
-            .contact-box {
-                min-width: 100%;
-                max-width: 100%;
-                padding: 20px;
-            }
+    .contact-box {
+        min-width: 100%;
+        max-width: 100%;
+        padding: 20px;
+    }
 
-            .contact-buttons {
-                width: 100%;
-                gap: 10px;
-            }
+    .contact-buttons {
+        width: 100%;
+        gap: 10px;
+    }
 
-            .call-btn, .whatsapp-btn {
-                width: 100%;
-                min-width: 0;
-                padding: 12px 20px;
-            }
+    .call-btn, .whatsapp-btn {
+        width: 100%;
+        min-width: 0;
+        padding: 12px 20px;
+    }
+}
 
             .location-coords, .location-details {
                 padding: 20px;
@@ -1019,16 +1148,34 @@ nav ul li a:hover {
             footer p {
                 font-size: 0.9rem;
             }
-        }
+
+            .vr-content {
+                flex-direction: column;
+            }
+
+            .vr-headset {
+                width: 200px;
+                height: 200px;
+            }
+
     </style>
 </head>
 <body>
 
+<!-- Update your header section -->
 <header>
     <div class="logo-container">
-        <img src="images/RVR_Developers_Logo.webp" alt="RVR Developers" class="logo" onerror="this.src='/api/placeholder/80/80'; this.alt='RVR Logo';">
+        <img src="images/RVR LOGO.png" alt="RVR Builders and Developers" class="logo" onerror="this.src='/api/placeholder/80/80'; this.alt='RVR Logo';">
         <h1></h1>
     </div>
+
+    <button class="menu-toggle" id="menuToggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+    </button>
 
     <nav id="mainNav">
         <ul>
@@ -1054,7 +1201,7 @@ nav ul li a:hover {
 <section id="about" class="section section-background">
     <div class="container">
         <h2 class="section-title">About Us</h2>
-        <p class="section-content">RVR Developers is a leading real estate and construction company committed to providing top-notch properties and services. With years of experience in the industry, we have established ourselves as a trusted name in real estate development across Bengaluru. Our team of dedicated professionals works tirelessly to create spaces that combine functionality, aesthetics, and comfort to give you the perfect living experience.</p>
+        <p class="section-content">RVR Builders and Developers is a leading real estate and construction company committed to providing top-notch properties and services. With years of experience in the industry, we have established ourselves as a trusted name in real estate development across Bengaluru. Our team of dedicated professionals works tirelessly to create spaces that combine functionality, aesthetics, and comfort to give you the perfect living experience.</p>
         <a href="#contact" class="cta-btn">Connect With Us</a>
     </div>
 </section>
@@ -1091,10 +1238,10 @@ nav ul li a:hover {
             </div>
             <div class="work-card">
                 <div class="work-img">
-                    <img src="images/Residential Township.png" alt="Residential Township" onerror="this.src='/api/placeholder/280/220'; this.alt='Residential Township';">
+                    <img src="images/Interior work.png" alt="Interior work" onerror="this.src='/api/placeholder/280/220'; this.alt='Residential Township';">
                 </div>
                 <div class="work-title">
-                    <h3>Residential Township</h3>
+                    <h3>Interior work</h3>
                 </div>
             </div>
         </div>
@@ -1105,7 +1252,7 @@ nav ul li a:hover {
     <div class="container">
         <h2 class="section-title">Our Services</h2>
         <div class="services-intro">
-            <p>RVR Developers, one of the most renowned and esteemed real estate developers in Bengaluru, specializes in designing outstanding living areas that suit your tastes and way of life. Our extensive range of services includes:</p>
+            <p>RVR Builders and Developers, one of the most renowned and esteemed real estate developers in Bengaluru, specializes in designing outstanding living areas that suit your tastes and way of life. Our extensive range of services includes:</p>
         </div>
         <div class="services-grid">
             <div class="service-card">
@@ -1153,13 +1300,13 @@ nav ul li a:hover {
                     <p class="usp-text">We do the work; you just watch your home grow from the ground up. End to end, we own it.</p>
                 </div>
                 <div class="usp-icon">
-                    <img src="images/end-to-end-icon.png" alt="End to End Construction" onerror="this.src='/api/placeholder/40/40'; this.alt='End to End';">
+                    <img src="images/end-to-end-icon.png" alt="End to End Construction">
                 </div>
             </div>
 
             <div class="usp-item right-item">
                 <div class="usp-icon">
-                    <img src="images/no-delays-icon.png" alt="No Delays" onerror="this.src='/api/placeholder/40/40'; this.alt='No Delays';">
+                    <img src="images/no-delays-icon.png" alt="No Delays">
                 </div>
                 <div class="usp-content text-left">
                     <h3 class="usp-heading">No Delays</h3>
@@ -1181,13 +1328,13 @@ nav ul li a:hover {
                     <p class="usp-text">We ensure quality by design. Quality construction reassured.</p>
                 </div>
                 <div class="usp-icon">
-                    <img src="images/quality-icon.png" alt="Assured Quality" onerror="this.src='/api/placeholder/40/40'; this.alt='Quality';">
+                    <img src="images/quality-icon.png" alt="Assured Quality">
                 </div>
             </div>
 
             <div class="usp-item right-item">
                 <div class="usp-icon">
-                    <img src="images/transparency-icon.png" alt="100% Transparency" onerror="this.src='/api/placeholder/40/40'; this.alt='Transparency';">
+                    <img src="images/transparency-icon.png" alt="100% Transparency">
                 </div>
                 <div class="usp-content text-left">
                     <h3 class="usp-heading">100% Transparency</h3>
@@ -1213,13 +1360,13 @@ nav ul li a:hover {
         </div>
 
         <div class="why-choose-vr">
-            <h3>Why Choose RVR Developers?</h3>
+            <h3>Why Choose RVR Builders and Developers?</h3>
             <ul>
                 <li>Expertise in house construction, office interiors, landscaping, and luxury villas.</li>
                 <li>Focus on energy-efficient and functional home designs.</li>
                 <li>Commitment to affordability without compromising quality.</li>
             </ul>
-            <p>RVR Developers offers reliability, transparency, and sustainability, making them a top choice for home construction in Bangalore.</p>
+            <p>RVR Builders and Developers offers reliability, transparency, and sustainability, making them a top choice for home construction in Bangalore.</p>
         </div>
     </div>
 </section>
@@ -1246,7 +1393,7 @@ nav ul li a:hover {
             <div class="contact-box">
                 <div class="info-item">
                     <h3>Our Office</h3>
-                    <p>RVR Developers Office</p>
+                    <p>RVR Builders and Developers Office</p>
                     <p>Yelhanka Old Town</p>
                     <p>Near Velupula Pride</p>
                     <p>Bengaluru, Karnataka</p>
@@ -1281,7 +1428,7 @@ nav ul li a:hover {
 </section>
 
 <footer>
-    <p>&copy; 2025 RVR Developers. All Rights Reserved.</p>
+    <p>&copy; 2025 RVR Builders and Developers. All Rights Reserved.</p>
 </footer>
 
 <script>
@@ -1292,8 +1439,19 @@ nav ul li a:hover {
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
+
+            // Close mobile menu when a link is clicked
+            if (window.innerWidth <= 768) {
+                document.getElementById('mainNav').classList.remove('active');
+            }
         });
     });
+
+    // Mobile menu toggle
+   document.getElementById('menuToggle').addEventListener('click', function() {
+    document.getElementById('mainNav').classList.toggle('active');
+});
+
 </script>
 </body>
 </html>
